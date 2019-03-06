@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Slick Playground</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css">
+    <style type="text/css">
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background: grey;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .slider {
+            width: 90%;
+            margin: 80px auto 0px;
+        }
+        
+        .sl_photo{
+            width: 100%;
+            
+        }
+        .slick-slide img {
+            width: 60%;
+            max-height: 200px;
+            overflow: hidden;
+            display: block;
+            margin: 0 auto;
+            padding-top: 6%;
+        }
+
+        .slick-prev:before,
+        .slick-next:before {
+            color: black;
+        }
+
+        .sl_text {
+            text-align: center;
+            width: 100%;
+        }
+
+        .slick-slide p,
+        .slick-slide h3 {
+            opacity: 0;
+        }
+
+        .slick-current p,
+        .slick-current h3 {
+            transition-timing-function: ease-in;
+            transition-duration: 1s;
+            opacity: 1;
+        }
+
+        .slick-current img {
+            width: 100%;
+            padding-top: 0;
+        }
+
+        .slick-slide {
+            transition: all ease-in-out 1s;
+            opacity: .2;
+        }
+
+        .slick-active {
+            opacity: .5;
+        }
+
+        .slick-current {
+            opacity: 1;
+        }
+
+        .arrows_new {
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .arrows_new img {
+            width: 70px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <section class="horizontal_sl slider">
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic1.jpg"></a></div>
+            <div class="sl_text">
+                <h3>502356</h3>
+                <p>hsbfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"> <img src="images/pic2.jpg"></a></div>
+            <div class="sl_text">
+                <h3>58356</h3>
+                <p>HGhjsmfsvfcmv bcbnnnnnnnnnnn nnnnnnnnnnn nnnnnnn nnnjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic3.jpg"></a></div>
+            <div class="sl_text">
+                <h3>56</h3>
+                <p>kbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic4.jpg"></a></div>
+            <div class="sl_text">
+                <h3>852356</h3>
+                <p>OLJH HGhhsbfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic5.jpg"></a></div>
+            <div class="sl_text">
+                <h3>88356</h3>
+                <p>dfdgk HGhhsbfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic1.jpg"></a></div>
+            <div class="sl_text">
+                <h3>55556</h3>
+                <p>slkd HGhhsbfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic6.jpg"></a></div>
+            <div class="sl_text">
+                <h3>253356</h3>
+                <p>GHJHj HGhhsbfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic4.jpg"></a></div>
+            <div class="sl_text">
+                <h3>0022356</h3>
+                <p>bfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic3.jpg"></a></div>
+            <div class="sl_text">
+                <h3>502356</h3>
+                <p>sbfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+        <div>
+            <div class="sl_photo">
+                <a href="#"><img src="images/pic5.jpg"></a></div>
+            <div class="sl_text">
+                <h3>03756</h3>
+                <p> HGhhsbfbskfkbsvjbvcv</p>
+            </div>
+        </div>
+
+    </section>
+    <div class="arrows_new">
+        <img src="images/left.png" class="left">
+        <img src="images/right.png" class="right">
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="./slick/slick.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+            $(".horizontal_sl").slick({
+                centerMode: true,
+                centerPadding: '50px',
+                slidesToShow: 3,
+
+                infinite: true,
+                arrows: false,
+                autoplay: true,
+                autoplaySpeed: 4000,
+                responsive: [{
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 3
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        });
+        $('.left').click(function() {
+            $('.slider').slick('slickPrev');
+        })
+
+        $('.right').click(function() {
+            $('.slider').slick('slickNext');
+        })
+
+    </script>
+
+</body>
+
+</html>
